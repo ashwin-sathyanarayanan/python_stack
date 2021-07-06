@@ -1,0 +1,102 @@
+pip install Django==1.11.9 -> This installed Django into the virtual env.
+
+
+Collecting Django==1.11.9
+  Downloading https://files.pythonhosted.org/packages/c8/a6/291039f0ce4b9818e0399359866337e6dfe9c0e23d8d94f00e657edbfcd8/Django-1.11.9-py2.py3-none-any.whl (6.9MB)
+    100% |████████████████████████████████| 7.0MB 201kB/s
+Collecting pytz (from Django==1.11.9)
+  Downloading https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl (510kB)
+    100% |████████████████████████████████| 512kB 1.1MB/s
+Installing collected packages: pytz, Django
+Successfully installed Django-1.11.9 pytz-2021.1
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+-------------------------------------------------------------
+
+pip list -> pip is a package manager, and pip list is showing what packages are currently installed.
+
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+Django (1.11.9)
+pip (9.0.1)
+pytz (2021.1)
+setuptools (28.8.0)
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+--------------------------------------------------------------
+
+(py3Env) PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments> deactivate 
+PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments> 
+
+Deactivate pulls you out of your virtual env.
+
+---------------------------------------------------------------
+
+PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments> pip3 list
+
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+pip (9.0.1)
+setuptools (28.8.0)
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+this command is showing what is installed in the local machine instead of the virtual env.
+
+-----------------------------------------------------------------
+
+PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments> py3Env/Scripts/activate   
+(py3Env) PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments>
+
+Activated the virtual env.
+
+-------------------------------------------------------------------
+
+(py3Env) PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments> pip install 
+Django==1.11.9
+Requirement already satisfied: Django==1.11.9 in c:\users\ashwin.sathyanarayan\documents\coding dojo\python_stack\my_environments\py3env\lib\site-packages
+Requirement already satisfied: pytz in c:\users\ashwin.sathyanarayan\documents\coding dojo\python_stack\my_environments\py3env\lib\site-packages (from Django==1.11.9)
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env) PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack\my_environments>
+
+displaying the location of the existing package which was already installed.
+
+----------------------------------------------------------------------
+pip freeze  -> Shows the lodules that has been installed and the version which was installed.
+
+Django==1.11.9
+pytz==2021.1
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+-----------------------------------------------------------------------
+(py3Env) PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack> pip freeze > requirements.txt
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env) PS C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack> ls
+
+
+    Directory: C:\Users\ashwin.sathyanarayan\Documents\Coding Dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         7/6/2021  12:23 PM                .vscode
+d-----         7/6/2021  10:29 AM                django
+d-----         7/6/2021  11:15 AM                my_environments
+d-----         7/6/2021  10:31 AM                _python
+-a----         7/6/2021  12:54 PM             62 requirements.txt
+
+--> stored the return of the call into a file called requirements.
+
+--------------------------------------------------------------------------
+
+pip uninstall Django -> uninstalls Django from the virtual env.
+
+---------------------------------------------------------------------------
+
+pip show Django -> shows the information regarding the package.
+
+You are using pip version 9.0.1, however version 21.1.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
