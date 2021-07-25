@@ -1,0 +1,38 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#wrapper{
+    background-color: blanchedalmond;
+    min-width: 600px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header{
+    outline: solid black 2px;
+    width: 250px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#container{
+    outline: solid black 2px;
+    width: 390px;
+    height: 200px;
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
