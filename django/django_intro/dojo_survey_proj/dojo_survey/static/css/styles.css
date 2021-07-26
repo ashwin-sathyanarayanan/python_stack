@@ -1,0 +1,29 @@
+/* CSS Reset */
+
+*{
+    margin: 3px;
+    padding: 0;
+    /* outline: 1px solid black; */
+}
+
+
+#wrapper{
+    width: 400px;
+    height: 300px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#comment{
+    display: flex;
+    flex-direction: column;
+}
+
+#button{
+    display: flex;
+    justify-content:flex-end;
+}
