@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+    <body>
+        <div id = 'wrapper'> 
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email Address</th>
+                    <th>Age</th>
+                </tr>                
+            {% for user in all_users %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.email_address}}</td>
+                    <td>{{user.age}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <form action="/create_user" method="POST"> 
+                {% csrf_token %}   
+                <p>First Name: <input name="first_name" type="text"></p>
+                <p>Last Name: <input name="last_name" type="text"></p>
+                <p>Email Address: <input name="email_address" type="text"></p>
+                <p>Age: <input name="age" type="text"></p>
+            <div id="button">
+                <button type="submit">Submit</button>  
+            </div>
+            </form>
+        </div>
+    </body>
+</html>

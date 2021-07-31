@@ -13,12 +13,12 @@ Retrieve the first User:
     User.objects.first()
 
 Change the user with id=3 so their last name is Pancakes.
-    c = User.objects.get(id=3)
-	c.last_nsame = "Pancakes"
+    c = User.objects.get(id=4)
+	c.id = 2
 	c.save()
 
 Delete the user with (id=2) from the database:
-    c = User.objects.get(id=2)
+    c = User.objects.get(id=4)
 	c.delete()
 
 Get all users sorted by first name:
