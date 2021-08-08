@@ -1,0 +1,60 @@
+Query: Create 5 books with the following names: C Sharp, Java, Python, PHP, Ruby:
+Book.objects.create(title = "C Sharp")
+Book.objects.create(title = "Java")
+Book.objects.create(title = "Python")
+Book.objects.create(title = "PHP")
+Book.objects.create(title = "Ruby")
+
+Query: Create 5 different authors: Jane Austen, Emily Dickinson, Fyodor Dostoevsky, William Shakespeare, Lau Tzu:
+Author.objects.create(first_name = "Jane", last_name = "Austen")
+Author.objects.create(first_name = "Emily", last_name = "Dickinson")
+Author.objects.create(first_name = "Fyodor", last_name = "Dostoevsky")
+Author.objects.create(first_name = "William", last_name = "Shakespeare")
+Author.objects.create(first_name = "Lau", last_name = "Tzu")
+
+Query: Change the name of the C Sharp book to C#:
+c = Book.objects.get(id=1)
+c.name = "C#"
+c.save
+
+Query: Change the first name of the 4th author to Bill
+c = Book.objects.get(id=4)
+c.first_name = "Bill"
+c.save
+
+Query: Assign the first author to the first 2 books
+author1.books.add(book1)
+author1.books.add(book2)
+
+Query: Assign the second author to the first 3 books:
+>>> author2.books.add(book1) 
+>>> author2.books.add(book2) 
+>>> author2.books.add(book3) 
+
+Query: Assign the third author to the first 4 books
+>>> author3.books.add(book1) 
+>>> author3.books.add(book2) 
+>>> author3.books.add(book3) 
+>>> author3.books.add(book4) 
+
+Query: Assign the fourth author to the first 5 books (or in other words, all the books)
+>>> author4.books.add(book1) 
+>>> author4.books.add(book2) 
+>>> author4.books.add(book3) 
+>>> author4.books.add(book4) 
+>>> author4.books.add(book5) 
+
+Query: Retrieve all the authors for the 3rd book
+book3.authors.all()
+
+Query: Remove the first author of the 3rd book
+book3.authors.remove(author3)
+
+Query: Add the 5th author as one of the authors of the 2nd book
+author5.books.add(book2)
+
+Query: Find all the books that the 3rd author is part of
+author3.books.all()
+
+Query: Find all the authors that contributed to the 5th book
+book5.authors.all()
