@@ -1,0 +1,13 @@
+
+#wrapper{
+    width: 500px;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom-con{
+    margin-top: 20px;
+}

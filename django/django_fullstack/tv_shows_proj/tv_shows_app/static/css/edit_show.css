@@ -1,0 +1,17 @@
+#wrapper{
+    width: 400px;
+}
+
+#mid-con{
+    display: flex;
+
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+p,input,label,textarea{
+    margin-left: 5px;
+}

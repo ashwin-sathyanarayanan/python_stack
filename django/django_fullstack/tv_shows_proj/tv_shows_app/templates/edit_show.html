@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit TV Show</title>
+    <link rel="stylesheet" href="{% static 'css/edit_show.css' %}">
+</head>
+<body>
+    <div id = "wrapper">
+        <div id = "header">
+            <h1>Edit Show {{ this_show.id }}</h1>
+            <a href="/shows">Go Back</a>
+        </div>
+        <div id = 'container'>
+            {% if messages %}
+            <ul class="messages">    
+                {% for message in messages %}    
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/shows/{{this_show.id}}/update" method = 'POST'>
+                {% csrf_token %}
+                <p>Title: </p>
+                <input name="title" id = 'title' type="text" value = '{{this_show.title}}'>
+                <div id = 'mid-con'>
+                    <div class="mid-item">
+                        <p>Network: </p>
+                        <input name="network" id = 'network' type="text" value = '{{this_show.network}}'>
+                    </div>
+                    <div class="mid-item">
+                        <p>Release Date: </p>
+                        <input type="date" name = 'release_date' class="form-control" id="date" value='{{this_show.release_date|date:"Y-m-d" }}'>
+                    </div>
+                </div>
+                <p><label for="description">Description:</label></p>
+                <textarea id="description" name="description"  rows="4" cols="40">{{this_show.description}}</textarea>
+                <p><input type="submit" value="Update"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
