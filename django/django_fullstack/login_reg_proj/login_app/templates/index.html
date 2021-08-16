@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div id = 'wrapper'>    
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <div id = 'reg'>
+            <h1>Registration</h1>
+            <form action="/register" method = 'POST'>
+                {% csrf_token %}
+                <p><label for="first_name">First Name:</label>
+                    <input name="first_name" id = 'first_name' type="text"></p>
+                <p><label for="last_name">Last Name:</label>
+                    <input name="last_name" id = 'last_name' type="text"></p>
+                <p><label for="email">Email:</label>
+                    <input name="email" id = 'email' type="text"></p>
+                <p><label for="password">Password:</label>
+                    <input name="password" id = 'password' type="password"></p>
+                <p><label for="confirm_pw">Confirm PW:</label>
+                    <input name="confirm_pw" id = 'confirm_pw' type="password"></p>
+                <p><input type="submit" value="Register"></p>
+            </form>
+        </div>
+        <div id = 'login'>
+            <h1>Login</h1>
+            <form action="/login" method = 'POST'>
+                {% csrf_token %}
+                <p><label for="email">Email:</label>
+                    <input name="email" id = 'email' type="text"></p>
+                <p><label for="password">Password:</label>
+                    <input name="password" id = 'password' type="password"></p>
+                <p><input type="submit" value="Login"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

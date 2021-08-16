@@ -1,0 +1,19 @@
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: 80px;
+}
+
+#reg{
+    display: flex;
+    flex-direction: column;
+}
+
+p>label{
+    width: 100px;
+}
+
+#reg{
+    width: 400px;
+}
+
